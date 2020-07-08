@@ -75,7 +75,7 @@ if which "$DCONF" > /dev/null 2>&1; then
 fi
 
 # Fallback for Gnome 2 and early Gnome 3
-[[ -z "$GCONFTOOL" ]] && GCONFTOOL=gconftool
+[[ -z "$GCONFTOOL" ]] && GCONFTOOL=gconftool-2
 [[ -z "$BASE_KEY" ]] && BASE_KEY=/apps/gnome-terminal/profiles
 
 PROFILE_KEY="$BASE_KEY/$PROFILE_SLUG"
@@ -109,7 +109,7 @@ glist_append string /apps/gnome-terminal/global/profile_list "$PROFILE_SLUG"
 
 gset string visible_name "$PROFILE_NAME"
 gset string palette "#282a36:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#f1f1f0:#686868:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#eff0eb"
-gset string background_color "#282a36"
+gset string background_color "#000000"
 gset string foreground_color "#eff0eb"
 gset string bold_color "#eff0eb"
 gset bool   bold_color_same_as_fg "true"
